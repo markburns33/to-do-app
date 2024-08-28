@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+</head>
+<body>
+        <nav class="sidebar">
+            <button class="nav-button btn">All Tasks</button>
+            <button class="nav-button btn">Important</button>
+            <button class="nav-button btn">Due Today</button>
+            <button class="nav-button btn">Due This Week</button>
+            <button class="add-task-button btn">Add Task</button>
+            <button class="add-project-button btn">New Project</button>
+        </nav>
+
+    <main id="content">
+
+    </main>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="task-close-button">&times;</span>
+            <form id="task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" name="task-name" required>
+                <label for="task-date">Due Date:</label>
+                <input type="date" id="task-date" name="task-date" required>
+                <label for="project-select">Select Project:</label>
+                <select id="project-select" name="project-select" required></select>
+
+                <label for="task-priority">Priority:</label>
+                <div id="task-priority">
+                    <input type="radio" id="priority-low" name="task-priority" value="low" required>
+                    <label for="priority-low">Low</label>
+                    <input type="radio" id="priority-medium" name="task-priority" value="medium">
+                    <label for="priority-medium">Medium</label>
+                    <input type="radio" id="priority-high" name="task-priority" value="high">
+                    <label for="priority-high">High</label>
+                </div>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="project-close-button">&times;</span>
+            <form id="project-form">
+                <label for="project-title">Title</label>
+                <input type="text" id="project-title" name="title" required><br>
+                <label for="project-desc">Description</label>
+                <input type="text" id="project-desc" name="desc" required><br>
+                <input type="submit" value="Add Project">
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

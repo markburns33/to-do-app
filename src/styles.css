@@ -1,0 +1,151 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+
+.sidebar {
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+}
+
+.btn {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #777;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-close-button, .task-close-button {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column; 
+    width: calc(100vw - 30vw);
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    padding: 0 3rem 0 3rem;
+    gap: 1rem;
+}
+
+.project-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project {
+    background-color: hsla(0, 0%, 0%, 0.2);
+    padding: 1rem;
+    margin: 1rem;
+    height:fit-content;
+    width: fit-content;
+}
+
+.task-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1rem;  
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+#task-priority {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#task-priority input[type="radio"] {
+    margin-right: 5px;
+}
+
+#task-priority label {
+    margin-right: 15px;
+}
+
+.task {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 1rem 0;
+    display: flex;
+    max-height: 15rem;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
+
+.task button {
+    align-self: baseline;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    background-color: #218838;
+}
+
+.task-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid black;
+}
+
+.task-desc, .task-date {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
