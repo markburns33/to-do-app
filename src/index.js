@@ -1,5 +1,6 @@
 /*
 sorting by date
+css
 */
 
 
@@ -95,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             navButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('avtive');
+            button.classList.add('active');
             switch (button.textContent) {
                 case 'Important':
                     content.innerHTML='';

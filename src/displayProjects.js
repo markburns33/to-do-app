@@ -11,13 +11,16 @@ function displayProjects(projects, tasks) {
 
         var newTitle = document.createElement('p');
         newTitle.textContent = project.title;
+        newTitle.classList.add('project-title');
 
         var newDesc = document.createElement('p');
         newDesc.textContent = project.desc;
+        newDesc.classList.add('project-desc');
 
         var showTasks = document.createElement('button')
         showTasks.type = 'submit';
         showTasks.textContent = 'show tasks';
+        showTasks.classList.add('project-button');
 
         newProject.appendChild(newTitle);
         newProject.appendChild(newDesc);
